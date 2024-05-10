@@ -17,7 +17,7 @@ const products = [
   },
   {
     id: 2,
-    name: "Pizz Napolitana",
+    name: "Pizza Napolitana",
     href: "#",
     price: "$2800",
     imageSrc: loborestobar,
@@ -60,15 +60,16 @@ const products = [
     imageAlt:
       "Hand holding black machined steel mechanical pencil with brass tip and top.",
   },
-  /*
+  {
     id: 7,
-    name: "ASD",
+    name: "Pizza Fugazzeta",
     href: "#",
     price: "$2800",
     imageSrc: loborestobar,
     imageAlt:
       "Hand holding black machined steel mechanical pencil with brass tip and top.",
   },
+  /*
   {
     id: 8,
     name: "Machined Mechanical Pencil",
@@ -83,13 +84,13 @@ const products = [
 
 export default function Contenido() {
   return (
-    <div className="bg-gray-200 flex-grow min-h-screen">
+    <div className="bg-gray-400 flex-grow min-h-screen">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8">
         <h1 className="text-4xl mb-5">Pizzas</h1>
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
-            <a key={product.id} href={product.href} className="group">
+            <div key={product.id} href={product.href} className="group">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                 <img
                   src={product.imageSrc}
@@ -101,7 +102,7 @@ export default function Contenido() {
               <p className="mt-1 text-lg font-medium text-gray-900">
                 {product.price}
               </p>
-            </a>
+            </div>
           ))}
         </div>
 
